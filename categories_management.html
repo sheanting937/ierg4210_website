@@ -1,0 +1,44 @@
+﻿<!-- Reference from Poe, Doubao -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management - IERG4210 Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>IERG4210 Shopping Website</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">HomePage</a> &gt; <a id="currentPage">Category Management</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="category-list">
+            <h2>Category Management</h2>
+        </div>
+
+        <div class="management-list-container">
+            <div class="management-form-container">
+                <form id="addCategoryForm">
+                    <input type="hidden" id="categoryId" name="categoryId">
+                    <label for="categoryName">Category Name:</label>
+                    <input type="text" id="categoryName" name="categoryName">
+                    <button type="submit" id="submitButton">Add Category</button>
+                </form>
+            </div>
+            <div id="categoryList">
+            </div>
+        </div>
+    </main>
+
+    <script src="categories_managementScript.js"></script>
+</body>
+
+</html>

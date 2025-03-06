@@ -1,0 +1,165 @@
+﻿/*Reference from Poe, Doubao*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 15px;
+    }
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.center-image {
+    float: left;
+    width: 66.66%;
+}
+
+.center-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+.category-list {
+    float: left;
+    width: 33.33%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex-basis: 100%;
+    }
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .product-details img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.navigation a {
+    text-decoration: underline;
+}
+
+.shopping-list {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.shopping-list-trigger {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.shopping-list-content {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin-top: 5px;
+}
+
+.shopping-list:hover .shopping-list-content {
+    display: block;
+}
+
+#cartItems li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    #cartItems li input {
+        width: 50px;
+    }
+
+#checkoutButton {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.management-form-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.management-list-container {
+    width: 100%;
+    padding: 20px;
+}
+
+#addProductForm label,
+#addProductForm input,
+#addProductForm select,
+#addProductForm textarea,
+#addProductForm button {
+    display: block;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,40 @@
+﻿<!-- Reference from Poe, Doubao -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page - IERG4210 Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>IERG4210 Shopping Website</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">HomePage</a> &gt; <a id="currentCategory">Category</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-list" id="productList"></div>
+    </main>
+
+    <div class="shopping-list" id="shoppingList">
+        <div class="shopping-list-trigger" onclick="toggleShoppingList()">🛒</div>
+        <div class="shopping-list-content">
+            <h2>Shopping List</h2>
+            <ul id="cartItems"></ul>
+            <p>Total Price: <span id="totalPrice">$0.00</span></p>
+            <button id="checkoutButton">Checkout</button>
+        </div>
+    </div>
+
+    <script src="AddToCartScript.js"></script>
+    <script src="categoryScript.js"></script>
+</body>
+
+</html>
